@@ -1,3 +1,19 @@
 table {
     width: 100%;
 }
+.white-icon {
+  color: green;
+}
+.grey-icon {
+  color: darkslategrey;
+}
+.add-student{
+  margin-top: 5px;
+  position: relative;
+  height: 50px;
+}
+.add-student .button-add{
+position: absolute;
+  top: 50%;
+  right: 5%;
+}

@@ -18,12 +18,14 @@ import {MatTabsModule} from "@angular/material/tabs";
 import { NavComponent } from './nav/nav.component';
 import {MatTableModule} from "@angular/material/table";
 import {MatPaginatorModule} from "@angular/material/paginator";
+import { EditStudentComponent } from './edit-student/edit-student.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     StudentsComponent,
     NavComponent,
+    EditStudentComponent,
   ],
   imports: [
     BrowserModule,

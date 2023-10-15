@@ -10,7 +10,7 @@ import {Router} from "@angular/router";
   styleUrls: ['./students.component.css']
 })
 export class StudentsComponent implements AfterViewInit {
-  displayedColumns: string[] = ['id', 'name', 'surname', 'age','DateOfBirth'];
+  displayedColumns: string[] = ['image','id', 'name', 'surname', 'age','DateOfBirth','Actions'];
   public students: any;
   // @ts-ignore
   dataSource = new MatTableDataSource<PeriodicElement>();
@@ -36,14 +36,22 @@ export class StudentsComponent implements AfterViewInit {
           console.log(err);
     })
   }
+
+  OnEditStudent(element: any) {
+    console.log(element);
+    this.router.navigateByUrl("/edit-student/"+element.id );
+
+  }
 }
 
 export interface PeriodicElement {
+  image: string;
   name: string;
   id: number;
   surname: number;
   age: number;
   DateOfBirth: Date;
+  Actions: string;
 }
 
 
